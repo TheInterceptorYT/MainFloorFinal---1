@@ -1,0 +1,217 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/mainfloor.jpg");
+  margin: 0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  height: 20%;
+  width: 100%;
+}
+
+.rowspecial {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.box {
+  height: 100%;
+  width: 20%;
+}
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.contain-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.contain-arrow {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.contain-minimap {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.moveminimap {
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+
+.uparrow {
+  position: relative;
+  top: -30px;
+}
+
+.rightarrow {
+  position: relative;
+  left: 140px;
+}
+
+.leftarrow {
+  position: relative;
+  right: 140px;
+}
+
+.firstkey {
+  max-height: 100%;
+  max-width: 100%;
+  transform: rotate(180deg);
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.plate {
+  max-height: 60%;
+  max-width: 60%;
+  position: relative;
+  top: -100px;
+  left: -100px;
+}
+
+.clickable1 {
+  filter: brightness(50%) drop-shadow(2px 8px 3px);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.clickable1:hover {
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(2px 8px 3px);
+  transform: scale(1.2);
+}
+.clickable1:active {
+  filter: drop-shadow(0px 0px 3px);
+  transform: scale(0.98);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+.modal-body img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 50px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #fff;
+  cursor: pointer;
+}
+
+.inventory-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* colors to see divs */
+.black {
+  background-color: #000000;
+}
+.pink {
+  background-color: #eb5674;
+}
+.blue {
+  background-color: #01acf1;
+}
+.red {
+  background-color: #ed1b24;
+}
+.green {
+  background-color: #32d666;
+}
+.yellow {
+  background-color: #fbee40;
+}
+.orange {
+  background-color: #fd5632;
+}
+.grey {
+  background-color: #d3d3d3;
+}
+.dark-grey {
+  background-color: #3a3b3c;
+}
+
+.moveposter {
+  position: relative;
+  left: 1000px; /* keeps horizontal position */
+  top: -50px; /* negative value moves it up */
+  transform: rotate(10deg); /* rotates clockwise 10 degrees */
+}
+
+#jumpscareOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#jumpscareOverlay img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#gameOverScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}

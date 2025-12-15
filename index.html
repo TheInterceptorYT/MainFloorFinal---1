@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Main Floor</title>
+  </head>
+  <body class="black">
+    <audio id="bgAudio" src="music/ambience.mp3" loop></audio>
+    <audio src="sfx/papercrush.mp3" type="audio/mp3" id="crumple"></audio>
+    <audio src="sfx/tablespush.mp3" type="audio/mp3" id="push"></audio>
+    <div
+      class="row"
+      id="tableRow"
+      style="position: absolute; top: 10%; width: 100%; z-index: 5"
+    >
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content">
+        <img
+          src="images/mainfloorminimap.png"
+          class="contain-minimap moveminimap"
+        />
+      </div>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row">
+      <div class="box center-content">
+        <img
+          src="images/leftarrow.png"
+          class="contain-arrow leftarrow clickable1"
+          onclick="goLeft()"
+        />
+      </div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content">
+        <img
+          src="images/rightarrow.png"
+          class="contain-arrow rightarrow clickable1"
+          onclick="goRight()"
+        />
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="rowspecial">
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+      <div class="box center-content"></div>
+    </div>
+
+    <!-- Row 5 (bottom clickable images / Inventory) -->
+    <div class="row" id="bottomRow">
+      <div class="box center-content">
+        <!-- First key already here -->
+        <img src="images/KEY.png" class="firstkey" />
+      </div>
+      <div class="box center-content">
+        <img
+          src="images/poster.png"
+          class="contain-image clickable1 moveposter"
+          id="notepad"
+          onclick="openNotepad(), playCrumple()"
+        />
+      </div>
+      <div class="box center-content">
+        <img
+          src="images/paperplate.png"
+          class="plate clickable1"
+          onclick="openNotepad2(), playPush()"
+        />
+      </div>
+    </div>
+
+    <!-- Shared Modal -->
+    <div class="modal center" id="myModal">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <div class="modal-body center">
+        <img id="modalImage" src="" alt="Enlarged image" />
+      </div>
+    </div>
+
+    <!-- Jumpscare overlay -->
+    <div id="jumpscareOverlay" style="display: none">
+      <img src="gifs/freddyjumpscare.gif" id="jumpscareGif" />
+      <audio id="jumpscareAudio" src="sfx/freddyjumpscare.mp3"></audio>
+    </div>
+
+    <!-- Game Over screen -->
+    <div id="gameOverScreen" style="display: none">
+      <div
+        style="
+          color: white;
+          font-size: 48px;
+          text-align: center;
+          margin-top: 30vh;
+        "
+      >
+        GAME OVER
+        <br /><br />
+        <button
+          id="restartBtn"
+          style="padding: 12px 24px; font-size: 24px; cursor: pointer"
+        >
+          Restart
+        </button>
+      </div>
+    </div>
+
+    <audio id="yayAudio" src="sfx/yay.mp3"></audio>
+
+    <div class="modal center" id="posterModal">
+      <span class="close" onclick="hidePosterModal()">&times;</span>
+      <div class="modal-body center">
+        <img
+          id="posterImage"
+          src="images/poster.png"
+          alt="Poster"
+          style="max-width: 90vw; max-height: 90vh; border-radius: 8px"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
