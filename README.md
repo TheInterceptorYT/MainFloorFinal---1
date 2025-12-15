@@ -1,4 +1,4 @@
-# MainFloorFinal---1 The Second Puzzle
+# The Second Puzzle
 
 # Description
 
