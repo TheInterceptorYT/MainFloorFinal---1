@@ -32,6 +32,10 @@ Solution
 
 # How to play!
 
+To play the full game go here!
+
+[https://theinterceptoryt.github.io/IntroCutscene/](https://theinterceptoryt.github.io/IntroCutscene/)
+
 # Future Improvments
 
 Add more sound effects and
