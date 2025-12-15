@@ -34,6 +34,6 @@ Solution
 
 # Future Improvments
 
-Add more sound effects
+Add more sound effects and
 Improve minimap UI
 
